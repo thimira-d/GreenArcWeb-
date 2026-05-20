@@ -5,8 +5,8 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 const info = [
   { icon: MapPin, title: 'Visit Our Office', lines: ['123 Green Street', 'Eco City, EC 12345', 'United States'] },
-  { icon: Phone, title: 'Call Us', lines: ['+1 (234) 567-890', '+1 (234) 567-891'] },
-  { icon: Mail, title: 'Email Us', lines: ['info@greenarc.com', 'projects@greenarc.com'] },
+  { icon: Phone, title: 'Call Us', lines: ['+61 410010084', '+971 504603867'] },
+  { icon: Mail, title: 'Email Us', lines: ['contactus.greenarc@gmail.com'] },
   { icon: Clock, title: 'Working Hours', lines: ['Mon - Fri: 8:00 AM - 6:00 PM', 'Sat: 9:00 AM - 1:00 PM'] },
 ]
 
@@ -16,10 +16,10 @@ export default function Contact() {
   return (
     <>
       <ParallaxHero 
-        title="Let's Build Something Sustainable" 
+        title="Let’s Shape a Sustainable Future Together" 
         subtitle="Get In Touch" 
         minHeight="min-h-[60vh]"
-        backgroundImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920"
+        backgroundImage="/images/people with ball.jpg"
       />
 
       <section className="py-24 lg:py-32">
@@ -55,7 +55,7 @@ export default function Contact() {
                     For urgent environmental incidents, our 24/7 hotline is available.
                   </p>
                   <a href="tel:+1234567899" className="mt-3 inline-block text-sm font-semibold text-white hover:text-primary-200">
-                    +1 (234) 567-899
+                    +61 410010084
                   </a>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function Contact() {
             <AnimatedSection direction="right" delay={0.2} className="lg:col-span-2">
               <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 lg:p-12">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Send a Message</h3>
-                <p className="text-gray-600 mb-8">Fill out the form below and we'll respond as soon as possible.</p>
+                <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll respond as soon as possible.</p>
                 <ContactForm />
               </div>
             </AnimatedSection>

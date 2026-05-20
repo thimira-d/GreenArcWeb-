@@ -4,7 +4,17 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 
-export function Hero({ title, subtitle, description, ctaPrimary, ctaSecondary, backgroundImage = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80', minHeight = 'min-h-[90vh]' }: any) {
+interface HeroProps {
+  title: string
+  subtitle: string
+  description?: string
+  ctaPrimary?: { label: string; href: string }
+  ctaSecondary?: { label: string; href: string }
+  backgroundImage?: string
+  minHeight?: string
+}
+
+export function Hero({ title, subtitle, description, ctaPrimary, ctaSecondary, backgroundImage = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80', minHeight = 'min-h-[90vh]' }: HeroProps) {
   return (
     <section className={`relative flex items-center ${minHeight} overflow-hidden`}>
       <div className="absolute inset-0">

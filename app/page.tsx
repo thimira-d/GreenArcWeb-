@@ -73,12 +73,12 @@ export default function Home() {
       <div className="relative">
         {/* Parallax Hero - full screen */}
         <ParallaxHero 
-          title="Engineering a Sustainable Future"
+          title="Pioneering a Sustainable Future"
           subtitle="GreenArc Consultancy"
-          description="Leading environmental and engineering consulting firm dedicated to delivering innovative solutions that protect our planet while driving economic growth."
+          description="A leading sustainability consultancy dedicated to delivering innovative strategies that foster environmental stewardship while driving economic resilience."
           ctaPrimary={{ label: 'Explore Services', href: '/services' }}
           ctaSecondary={{ label: 'View Projects', href: '/projects' }}
-          backgroundImage="https://learnarchitecture.net/wp-content/uploads/2026/03/Green-Architecture.webp"
+          backgroundImage="/images/Green-Architecture.webp"
         />
 
         {/* Stats Bar - Hidden at start, reveals on scroll down */}
@@ -106,13 +106,13 @@ export default function Home() {
                 <div className="w-16 h-1 bg-primary-600 mb-6"></div>
                 <span className="text-primary-600 font-semibold text-sm uppercase tracking-[0.2em]">About GreenArc</span>
                 <h2 className="mt-4 text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                  Pioneering Sustainable Solutions for a Better Tomorrow
+                  Strategizing Sustainable Solutions for a Better Tomorrow
                 </h2>
                 <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-                  With over 18 years of experience, GreenArc Consultancy combines technical expertise with a deep commitment to sustainability.
+                  GreenArc Consultancy combines strategic business acumen with a deep commitment to environmental stewardship. We empower organizations to seamlessly integrate sustainability into their core operations, creating long-term resilience and value for all stakeholders.
                 </p>
                 <ul className="mt-8 space-y-4">
-                  {['ISO 14001 Certified Environmental Management', 'Expert team of 50+ engineers', 'Proven track record across 15 countries', '24/7 project support and monitoring'].map(f => (
+                  {['Comprehensive Operational Frameworks', 'Data-Driven Strategic Roadmaps', 'Eco-Efficient Supply Chain Optimisation', 'Transparent ESG & Compliance Tracking'].map(f => (
                     <li key={f} className="flex items-center gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary-600 shrink-0" />
                       <span className="text-gray-700">{f}</span>
@@ -132,7 +132,7 @@ export default function Home() {
             <AnimatedSection direction="right" delay={0.2}>
               <div className="relative h-full min-h-[400px]">
                 <img 
-                  src="https://learnarchitecture.net/wp-content/uploads/2026/03/Green-Architecture2.webp"
+                  src="/images/Bosco Verticale, Milan, Italy.webp"
                   alt="GreenArc Office"
                   className="w-full h-full object-cover"
                 />
@@ -145,12 +145,12 @@ export default function Home() {
       {/* Full-Width Image Banner */}
       <section className="relative h-[60vh] overflow-hidden">
         <ImageReveal 
-          src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80&w=1920"
+          src="/images/True to the nature.avif"
           alt="Nature"
           className="absolute inset-0 h-full"
           overlayText={{ 
             title: 'TRUE TO NATURE', 
-            subtitle: 'We engineer solutions that honor the natural world.' 
+            subtitle: 'We foster solutions that honor the natural world.' 
           }}
         />
       </section>
@@ -248,14 +248,14 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 lg:py-32 bg-primary-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img src="https://learnarchitecture.net/wp-content/uploads/2026/03/Green-Architecture4.webp" alt="" className="w-full h-full object-cover" />
+          <img src="/images/sustainability_elements.jpg" alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 text-center">
           <AnimatedSection>
             <div className="w-16 h-1 bg-white/30 mx-auto mb-8"></div>
             <h2 className="text-3xl md:text-5xl font-bold text-white">Ready to Start Your Project?</h2>
             <p className="mt-6 text-xl text-primary-100 max-w-2xl mx-auto leading-relaxed">
-              Let's work together to create sustainable solutions that make a lasting impact.
+              Let us work together to create sustainable solutions that make a lasting impact.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link href="/contact">

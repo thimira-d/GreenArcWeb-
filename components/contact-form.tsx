@@ -7,10 +7,10 @@ import { Send, CheckCircle, Loader2 } from 'lucide-react'
 export function ContactForm() {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-  const [errors, setErrors] = useState<any>({})
+  const [errors, setErrors] = useState<Record<string, string>>({})
 
   const validate = (fd: FormData) => {
-    const e: any = {}
+    const e: Record<string, string> = {}
     const name = fd.get('name') as string, email = fd.get('email') as string, message = fd.get('message') as string
     if (!name || name.length < 2) e.name = 'Name too short'
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = 'Invalid email'
@@ -32,7 +32,7 @@ export function ContactForm() {
     <div className="flex flex-col items-center justify-center rounded-2xl bg-primary-50 p-12 text-center">
       <CheckCircle className="mb-4 h-16 w-16 text-primary-600" />
       <h3 className="text-2xl font-bold">Message Sent!</h3>
-      <p className="mt-2 text-gray-600">We'll get back to you within 24 hours.</p>
+      <p className="mt-2 text-gray-600">We will get back to you within 24 hours.</p>
       <Button variant="outline" className="mt-6" onClick={() => setSubmitted(false)}>Send Another</Button>
     </div>
   )

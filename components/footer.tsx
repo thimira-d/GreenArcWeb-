@@ -4,47 +4,115 @@ import { Mail, Phone, MapPin, Globe, MessageCircle } from 'lucide-react'
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="md:col-span-2">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Main Footer Content */}
+        <div className="py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+          
+          {/* Logo & Description - Takes 5 columns */}
+          <div className="md:col-span-5">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <img src="/logo.png" alt="GreenArc Consultancy" className="h-12 w-auto brightness-0 invert" />
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-white">GreenArc</span>
-                <span className="text-[10px] font-medium uppercase tracking-widest text-primary-400 -mt-1">Consultancy</span>
-              </div>
+              <img src="/logo.png" alt="GreenArc Consultancy" className="h-16 w-auto brightness-0 invert" />
             </Link>
-            <p className="max-w-sm text-gray-400 mb-6 leading-relaxed">
-              Leading environmental and engineering consulting firm dedicated to sustainable solutions for a better tomorrow.
+            <p className="text-gray-400 leading-relaxed max-w-sm mb-8">
+              A leading sustainability consultancy dedicated to delivering innovative strategies that foster environmental stewardship while driving economic resilience.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="p-2.5 rounded-lg bg-gray-800 hover:bg-primary-600 transition-colors"><Globe className="h-5 w-5" /></a>
-              <a href="#" className="p-2.5 rounded-lg bg-gray-800 hover:bg-primary-600 transition-colors"><MessageCircle className="h-5 w-5" /></a>
+            <div className="flex gap-3">
+              <a href="#" className="h-10 w-10 flex items-center justify-center bg-gray-800 hover:bg-primary-600 transition-colors">
+                <Globe className="h-5 w-5" />
+              </a>
+              <a href="#" className="h-10 w-10 flex items-center justify-center bg-gray-800 hover:bg-primary-600 transition-colors">
+                <MessageCircle className="h-5 w-5" />
+              </a>
             </div>
           </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Company</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/about" className="hover:text-primary-400 transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-primary-400 transition-colors">Services</Link></li>
-              <li><Link href="/projects" className="hover:text-primary-400 transition-colors">Projects</Link></li>
-              <li><Link href="/contact" className="hover:text-primary-400 transition-colors">Contact</Link></li>
+
+          {/* Quick Links - Takes 2 columns */}
+          <div className="md:col-span-2 md:col-start-7">
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">Company</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary-500 shrink-0" /> 123 Green Street, Eco City</li>
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary-500 shrink-0" /> +1 (234) 567-890</li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary-500 shrink-0" /> info@greenarc.com</li>
+
+          {/* Services - Takes 2 columns */}
+          <div className="md:col-span-2">
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">Services</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link href="/services" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  Sustainability
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  Compliance
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  Carbon Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  Training
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact - Takes 3 columns */}
+          <div className="md:col-span-3">
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">Contact</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-primary-500 shrink-0 mt-0.5" />
+                <span className="text-gray-400 text-sm">123 Green Street<br />Eco City, EC 12345</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-primary-500 shrink-0" />
+                <a href="tel:+61410010084" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  +61 410010084
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-primary-500 shrink-0" />
+                <a href="mailto:contactus.greenarc@gmail.com" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                  contactus.greenarc@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">© {new Date().getFullYear()} GreenArc Consultancy. All rights reserved.</p>
-          <div className="flex gap-6 text-sm text-gray-500">
-            <Link href="#" className="hover:text-gray-300 transition-colors">Privacy</Link>
-            <Link href="#" className="hover:text-gray-300 transition-colors">Terms</Link>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-gray-500">
+            © {new Date().getFullYear()} GreenArc Consultancy. All rights reserved.
+          </p>
+          <div className="flex gap-8 text-sm text-gray-500">
+            <Link href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-gray-300 transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

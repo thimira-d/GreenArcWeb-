@@ -1,7 +1,14 @@
 'use client'
 import { motion } from 'framer-motion'
 
-export function SectionHeader({ title, subtitle, centered = true, light = false }: any) {
+interface SectionHeaderProps {
+  title: string
+  subtitle?: string
+  centered?: boolean
+  light?: boolean
+}
+
+export function SectionHeader({ title, subtitle, centered = true, light = false }: SectionHeaderProps) {
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={centered ? 'text-center' : ''}>
       <h2 className={`text-3xl font-bold sm:text-4xl ${light ? 'text-white' : 'text-gray-900'}`}>{title}</h2>

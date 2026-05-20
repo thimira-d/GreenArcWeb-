@@ -46,7 +46,7 @@ export default function Services() {
         title="Our Services" 
         subtitle="What We Offer" 
         minHeight="min-h-[60vh]"
-        backgroundImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920"
+        backgroundImage="/images/Real-World-Examples-and-Cost-Benefit-Insights-of-Green-Building-Features-1.jpg"
       />
 
       <section className="py-24 lg:py-32 bg-gray-50">
@@ -85,7 +85,7 @@ export default function Services() {
             <div className="mt-20 text-center">
               <div className="bg-primary-900 p-12 md:p-16 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
-                  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1920" alt="" className="w-full h-full object-cover" />
+                  <img src="/images/Real-World-Examples-and-Cost-Benefit-Insights-of-Green-Building-Features-1.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="relative z-10">
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Need a Custom Solution?</h3>
