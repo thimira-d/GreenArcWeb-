@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: { default: 'GreenArc Consultancy', template: '%s | GreenArc Consultancy' },
   description: 'Leading environmental and engineering consulting firm providing sustainable solutions for infrastructure, energy, and environmental projects worldwide.',
   keywords: ['environmental consulting', 'engineering', 'sustainability', 'green energy', 'GreenArc'],
+  icons: { icon: '/Logo Icon.png' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
